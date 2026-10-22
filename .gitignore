@@ -1,0 +1,5 @@
+# Generated build output and local development artifacts
+bin/
+obj/
+.cli-home/
+.dotnet-home/

@@ -1,4 +1,34 @@
-﻿# Build candidate: Si_ServerModUI 2.0.0
+# Si_ServerModUI
+
+The optional dedicated-server companion for **Si_ClientModUI**. It tells compatible clients which commands and mod controls are available, then routes their actions through the server's existing handlers. **Current source version: 2.0.0.** Requires the server's Mono MelonLoader and Si_AdminMod.
+
+## Features at a glance
+
+- Supplies each player with the commands and admin options they can access.
+- Supports structured mod controls and player-specific menu choices from compatible providers.
+- Returns captured command replies and pushes vote updates to the client menu.
+- Sends catalog changes to subscribed clients without ongoing client catalog polling.
+- Keeps native command authorization; players without the client mod can continue using normal chat.
+
+Install `Si_ServerModUI.dll` on the **dedicated server**. Players use the separate `Si_ClientModUI.dll` client mod. Menu metadata is configured in `UserData/cfg/Si_ServerModUI/menu.json`.
+
+## Commands
+
+The companion exposes other mods' registered commands rather than adding a gameplay command set. It adds these diagnostics for admins with **Generic** permission:
+
+| Command | What it does |
+| --- | --- |
+| `!hudtest` | Write your current menu frame under the companion's config folder. |
+| `!hudtest /command [arguments]` | Execute a real command through the proxy and echo its captured reply. |
+
+Use the second form with the command you intend to run: it executes the action, including any normal gameplay or configuration effects.
+
+Developers: see the [client/server integration guide](https://github.com/daveyvde-1988/Si_ClientModUI/blob/main/README-DEVELOPERS.md) for provider exports and menu contracts.
+
+<details>
+<summary>Detailed documentation and historical release notes</summary>
+
+# Build candidate: Si_ServerModUI 2.0.0
 Built against the installed public Mono references and staged with Si_ClientModUI 0.17.0; not installed. Export parsing, player-scoped choices and structured control metadata extend the current bounded transport. Our names, configuration path and SiSquadHUD/2 marker remain. Install the matching client/server pair when replacing the temporary friend's SiModUI/2 pair. See [developer contract](../Si_ClientModUI/README-DEVELOPERS.md) and [validation / remaining live checks](../Si_ClientModUI/STRUCTURED_INTEGRATION_0.17.0.md). Earlier notes below are historical.
 
 # Si_ServerModUI 1.1.0
@@ -24,3 +54,5 @@ dotnet build ClientMods/Si_ServerModUI/Server/Si_ServerModUI.csproj -c Release -
 ```
 
 Reference path can be overridden with `-p:ServerRoot=<server directory>`. Packaging and optional verified installation are managed by `../Si_ClientModUI/Prepare-Release.ps1` and `../Si_ClientModUI/Install-ModUI.ps1 -Side server`. The client ZIP and server ZIP are separate. Neither has been deployed by this integration task.
+
+</details>
