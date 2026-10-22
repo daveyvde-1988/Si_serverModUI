@@ -1,0 +1,597 @@
+﻿{
+  "Commands": {
+    "/stats": {
+      "Label": null,
+      "Description": null,
+      "Mod": "Si_UnitBalance",
+      "Arg": null,
+      "Choices": null,
+      "Subs": null
+    },
+    "!rebalance": {
+      "Label": null,
+      "Description": null,
+      "Mod": "Si_UnitBalance",
+      "Arg": null,
+      "Choices": null,
+      "Subs": null
+    },
+    "!b": {
+      "Label": null,
+      "Description": null,
+      "Mod": "Si_UnitBalance",
+      "Arg": null,
+      "Choices": null,
+      "Subs": null
+    },
+    "!kick": {
+      "Label": "Kick player",
+      "Description": "Kicks the chosen player from the server.",
+      "Mod": null,
+      "Arg": "player",
+      "Choices": null,
+      "Subs": null
+    },
+    "!afk": {
+      "Label": "Kick AFK players",
+      "Description": "Kicks all AFK players right away. Takes no argument.",
+      "Mod": null,
+      "Arg": "",
+      "Choices": null,
+      "Subs": null
+    },
+    "!ban": {
+      "Label": "Ban player",
+      "Description": "Bans the chosen player and kicks them.",
+      "Mod": null,
+      "Arg": "player",
+      "Choices": null,
+      "Subs": null
+    },
+    "!team": {
+      "Label": "Move to team",
+      "Description": "Moves a player to a team; without a player it moves you.",
+      "Mod": null,
+      "Arg": "player,team",
+      "Choices": null,
+      "Subs": null
+    },
+    "!silence": {
+      "Label": "Silence chat",
+      "Description": "Stops the chosen player from sending chat messages.",
+      "Mod": null,
+      "Arg": "player",
+      "Choices": null,
+      "Subs": null
+    },
+    "!unsilence": {
+      "Label": "Unsilence chat",
+      "Description": "Lets the chosen player send chat messages again.",
+      "Mod": null,
+      "Arg": "player",
+      "Choices": null,
+      "Subs": null
+    },
+    "!mute": {
+      "Label": "Mute voice",
+      "Description": "Stops the chosen player from sending voice messages.",
+      "Mod": null,
+      "Arg": "player",
+      "Choices": null,
+      "Subs": null
+    },
+    "!unmute": {
+      "Label": "Unmute voice",
+      "Description": "Lets the chosen player send voice messages again.",
+      "Mod": null,
+      "Arg": "player",
+      "Choices": null,
+      "Subs": null
+    },
+    "!cmdrban": {
+      "Label": "Ban from commander",
+      "Description": "Restricts the chosen player to infantry, no commander role.",
+      "Mod": null,
+      "Arg": "player",
+      "Choices": null,
+      "Subs": null
+    },
+    "!removecommanderban": {
+      "Label": "Lift commander ban",
+      "Description": "Allows the chosen player to apply as commander again.",
+      "Mod": null,
+      "Arg": "player",
+      "Choices": null,
+      "Subs": null
+    },
+    "!demote": {
+      "Label": "Demote commander",
+      "Description": "Demotes the commander of a team; without a team it uses your own team.",
+      "Mod": null,
+      "Arg": "choice",
+      "Choices": [
+        [
+          "Sol",
+          "Sol"
+        ],
+        [
+          "Centauri",
+          "Centauri"
+        ],
+        [
+          "Alien",
+          "Alien"
+        ]
+      ],
+      "Subs": null
+    },
+    "!eject": {
+      "Label": "Eject driver",
+      "Description": "Ejects the chosen player from the vehicle they are driving.",
+      "Mod": null,
+      "Arg": "player",
+      "Choices": null,
+      "Subs": null
+    },
+    "!map": {
+      "Label": "Change map",
+      "Description": "Changes the map. Arguments: optionally a game mode after the map.",
+      "Mod": null,
+      "Arg": "map,mode?",
+      "Choices": null,
+      "Subs": null
+    },
+    "!unban": {
+      "Label": "Unban player",
+      "Description": "Removes the chosen player from the ban list.",
+      "Mod": null,
+      "Arg": "ban",
+      "Choices": null,
+      "Subs": null
+    },
+    "!banid": {
+      "Label": "Ban by SteamID",
+      "Description": "Bans an offline player. Arguments: Steam64 ID, then the player name.",
+      "Mod": null,
+      "Arg": "text,text?",
+      "Choices": null,
+      "Subs": null
+    },
+    "!chipmunk": {
+      "Label": "Chipmunk voices",
+      "Description": "Toggles chipmunk voice mode for everyone. Takes no argument.",
+      "Mod": null,
+      "Arg": "",
+      "Choices": null,
+      "Subs": null
+    },
+    "/commander": {
+      "Label": "Apply commander",
+      "Description": "Toggles your application for commander during the pre-round countdown.",
+      "Mod": null,
+      "Arg": "",
+      "Choices": null,
+      "Subs": null
+    },
+    "/mutiny": {
+      "Label": "Vote mutiny",
+      "Description": "Votes to replace your current commander. Takes no argument.",
+      "Mod": null,
+      "Arg": "",
+      "Choices": null,
+      "Subs": null
+    },
+    "!endround": {
+      "Label": "End round",
+      "Description": "Ends the current round once the game has started. Takes no argument.",
+      "Mod": null,
+      "Arg": "",
+      "Choices": null,
+      "Subs": null
+    },
+    "/nominate": {
+      "Label": "Nominate map",
+      "Description": "Nominates a map for the next vote. Arguments: optionally a game mode after the map.",
+      "Mod": null,
+      "Arg": "map,mode?",
+      "Choices": null,
+      "Subs": null
+    },
+    "/rtv": {
+      "Label": "Rock the vote",
+      "Description": "Votes to start a map vote. Takes no argument.",
+      "Mod": null,
+      "Arg": "",
+      "Choices": null,
+      "Subs": null
+    },
+    "currentmap": {
+      "Label": "Current map",
+      "Description": "Shows the current map to you. Takes no argument.",
+      "Mod": null,
+      "Arg": "",
+      "Choices": null,
+      "Subs": null
+    },
+    "nextmap": {
+      "Label": "Next map",
+      "Description": "Shows the next map in the cycle and rounds left. Takes no argument.",
+      "Mod": null,
+      "Arg": "",
+      "Choices": null,
+      "Subs": null
+    },
+    "mapcycle": {
+      "Label": "Show map cycle",
+      "Description": "Lists the maps in the map cycle to you. Takes no argument.",
+      "Mod": null,
+      "Arg": "",
+      "Choices": null,
+      "Subs": null
+    },
+    "!resources": {
+      "Label": "Give resources",
+      "Description": "Gives or takes resources. Arguments: amount (negative takes), then optional team name.",
+      "Mod": null,
+      "Arg": "text,text?",
+      "Choices": null,
+      "Subs": null
+    },
+    "!spawn": {
+      "Label": "Spawn object",
+      "Description": "Spawns an object at your position. Arguments: the object name.",
+      "Mod": null,
+      "Arg": "text",
+      "Choices": null,
+      "Subs": null
+    },
+    "!undospawn": {
+      "Label": "Undo last spawn",
+      "Description": "Destroys the last object you spawned. Takes no argument.",
+      "Mod": null,
+      "Arg": "",
+      "Choices": null,
+      "Subs": null
+    },
+    "!saveconfig": {
+      "Label": "Save spawn config",
+      "Description": "Saves all spawned objects to a json file. Arguments: file name.",
+      "Mod": null,
+      "Arg": "text",
+      "Choices": null,
+      "Subs": null
+    },
+    "!loadconfig": {
+      "Label": "Load spawn config",
+      "Description": "Removes current objects, loads a saved file. Arguments: file name.",
+      "Mod": null,
+      "Arg": "text",
+      "Choices": null,
+      "Subs": null
+    },
+    "!addconfig": {
+      "Label": "Add spawn config",
+      "Description": "Keeps current objects and adds a saved file. Arguments: file name.",
+      "Mod": null,
+      "Arg": "text",
+      "Choices": null,
+      "Subs": null
+    },
+    "/surrender": {
+      "Label": "Vote surrender",
+      "Description": "Votes for your team to surrender. Takes no argument.",
+      "Mod": null,
+      "Arg": "",
+      "Choices": null,
+      "Subs": null
+    },
+    "/techglitch": {
+      "Label": "Fix tech tier",
+      "Description": "Commander only, before the round: forces a tech tier sync for the team.",
+      "Mod": null,
+      "Arg": "",
+      "Choices": null,
+      "Subs": null
+    },
+    "!time": {
+      "Label": "Set time of day",
+      "Description": "Sets the game time, no value shows it. Arguments: hour from 0.0 to 23.99.",
+      "Mod": null,
+      "Arg": "text?",
+      "Choices": null,
+      "Subs": null
+    },
+    "!devour": {
+      "Label": "Worm on player",
+      "Description": "Spawns a Great Worm next to the chosen player.",
+      "Mod": null,
+      "Arg": "player",
+      "Choices": null,
+      "Subs": null
+    },
+    "!mapdump": {
+      "Label": "Dump map data",
+      "Description": "Writes map info, refinery and HQ scans to UserData/MapBalance (Si_MapBalance tooling).",
+      "Mod": "Si_MapBalance",
+      "Arg": null
+    },
+    "/formationsize": {
+      "Label": "Group size for a player",
+      "Description": "Maximum FPS group size for one player this match. After the player: 1..50.",
+      "Mod": "Si_Formation",
+      "Arg": "player",
+      "Choices": null,
+      "Subs": null,
+      "AdminOnly": true
+    },
+    "/formationsizeglobal": {
+      "Label": "Group size, match-wide",
+      "Description": "Maximum FPS group size for everyone this match, leader included. Arguments: 1..50.",
+      "Mod": "Si_Formation",
+      "Arg": "",
+      "Choices": null,
+      "Subs": null,
+      "AdminOnly": true
+    },
+    "/formationsizecommander": {
+      "Label": "Commander order size",
+      "Description": "Maximum units per commander formation order. Arguments: 1..100, or status.",
+      "Mod": "Si_Formation",
+      "Arg": "",
+      "Choices": null,
+      "Subs": null,
+      "AdminOnly": true
+    },
+    "/Formationspeedcap": {
+      "Label": "Speed cap near arrival",
+      "Description": "Faster units are capped near the final arrival point; centre-based pacing stays active.",
+      "Mod": "Si_Formation",
+      "Arg": "choice",
+      "Choices": [
+        [
+          "on",
+          "ON"
+        ],
+        [
+          "off",
+          "OFF"
+        ]
+      ],
+      "Subs": null,
+      "AdminOnly": true
+    },
+    "/formationTravel": {
+      "Label": "Travel distance",
+      "Description": "Locked formation travel distance this match. Arguments: metres 0..10000.",
+      "Mod": "Si_Formation",
+      "Arg": "",
+      "Choices": null,
+      "Subs": null,
+      "AdminOnly": true
+    },
+    "/formationTolerance": {
+      "Label": "Slot tolerance",
+      "Description": "Slot tolerance as percent of the nearest-neighbour spacing. Arguments: 10..100.",
+      "Mod": "Si_Formation",
+      "Arg": "",
+      "Choices": null,
+      "Subs": null,
+      "AdminOnly": true
+    },
+    "/FormationFallof": {
+      "Label": "Slowdown trigger",
+      "Description": "Percent outside the slot tolerance that triggers the slowdown. Arguments: 10..90.",
+      "Mod": "Si_Formation",
+      "Arg": "",
+      "Choices": null,
+      "Subs": null,
+      "AdminOnly": true
+    },
+    "/startdelay": {
+      "Label": "Start delay",
+      "Description": "Departure delays of a formation; the usage reply lists the lock forms. Arguments: see usage.",
+      "Mod": "Si_Formation",
+      "Arg": "",
+      "Choices": null,
+      "Subs": null,
+      "AdminOnly": true
+    },
+    "/startdelaylock": {
+      "Label": "Start delay, lock",
+      "Description": "Departure delay for locked formations. Arguments: seconds.",
+      "Mod": "Si_Formation",
+      "Arg": "",
+      "Choices": null,
+      "Subs": null,
+      "AdminOnly": true
+    },
+    "/startdelaysoftlock": {
+      "Label": "Start delay, soft lock",
+      "Description": "Departure delay for soft-locked formations. Arguments: seconds.",
+      "Mod": "Si_Formation",
+      "Arg": "",
+      "Choices": null,
+      "Subs": null,
+      "AdminOnly": true
+    },
+    "/startdelayspeedlock": {
+      "Label": "Start delay, speed lock",
+      "Description": "Departure delay for speed-locked formations. Arguments: seconds.",
+      "Mod": "Si_Formation",
+      "Arg": "",
+      "Choices": null,
+      "Subs": null,
+      "AdminOnly": true
+    }
+  },
+  "Mods": {
+    "Si_UnitBalance": {
+      "Name": "Unit Balance",
+      "Category": "player",
+      "Priority": 100,
+      "Nav": "/"
+    },
+    "Si_Buy": {
+      "Name": "Buy",
+      "Category": "player",
+      "Priority": 10,
+      "Nav": "/"
+    },
+    "Si_CommManagement": {
+      "Name": "Commander management",
+      "Category": "player",
+      "Priority": 100,
+      "Nav": "/"
+    },
+    "Si_CrabCannon": {
+      "Name": "Crab cannon",
+      "Category": "player",
+      "Priority": 81,
+      "Nav": "/"
+    },
+    "Si_EloMatchmaking": {
+      "Name": "Elo matchmaking",
+      "Category": "player",
+      "Priority": 31,
+      "Nav": "/"
+    },
+    "Si_Logistics": {
+      "Name": "Harvester Logistics Prototype",
+      "Category": "player",
+      "Priority": 100,
+      "Nav": "/"
+    },
+    "Si_HeavyTeleporter": {
+      "Name": "Heavy teleporter",
+      "Category": "player",
+      "Priority": 80,
+      "Nav": "/"
+    },
+    "Si_KingOfTheHill": {
+      "Name": "King of the Hill",
+      "Category": "player",
+      "Priority": 11,
+      "Nav": "/"
+    },
+    "Si_Leaderboard": {
+      "Name": "Leaderboard",
+      "Category": "player",
+      "Priority": 30,
+      "Nav": "/"
+    },
+    "Si_Mapcycle": {
+      "Name": "Map cycle and voting",
+      "Category": "player",
+      "Priority": 20,
+      "Nav": "/"
+    },
+    "Si_Formation": {
+      "Name": "Si_Formation",
+      "Category": "player",
+      "Priority": 100,
+      "Nav": "/"
+    },
+    "Si_RTS_AI": {
+      "Name": "Si_RTS_AI",
+      "Category": "player",
+      "Priority": 100,
+      "Nav": "/"
+    },
+    "Si_SurrenderCommand": {
+      "Name": "Surrender",
+      "Category": "player",
+      "Priority": 100,
+      "Nav": "/"
+    },
+    "Si_TechGlitch": {
+      "Name": "Tech glitch",
+      "Category": "player",
+      "Priority": 100,
+      "Nav": "/"
+    },
+    "Si_SpawnConfigs": {
+      "Name": "Spawn configs",
+      "Category": "player",
+      "Priority": 100,
+      "Nav": "/"
+    },
+    "Si_AFKManager": {
+      "Name": "AFK manager",
+      "Category": "player",
+      "Priority": 100,
+      "Nav": "/"
+    },
+    "Si_BasicBanlist": {
+      "Name": "Ban list",
+      "Category": "player",
+      "Priority": 100,
+      "Nav": "/"
+    },
+    "Si_BasicTeamBalance": {
+      "Name": "Team balance",
+      "Category": "player",
+      "Priority": 100,
+      "Nav": "/"
+    },
+    "Si_ChatSilence": {
+      "Name": "Chat silence",
+      "Category": "player",
+      "Priority": 100,
+      "Nav": "/"
+    },
+    "Si_ChipmunkVoices": {
+      "Name": "Chipmunk voices",
+      "Category": "player",
+      "Priority": 100,
+      "Nav": "/"
+    },
+    "Si_Eject": {
+      "Name": "Eject",
+      "Category": "player",
+      "Priority": 100,
+      "Nav": "/"
+    },
+    "Si_EndRound": {
+      "Name": "End round",
+      "Category": "player",
+      "Priority": 100,
+      "Nav": "/"
+    },
+    "Si_Resources": {
+      "Name": "Resources",
+      "Category": "player",
+      "Priority": 100,
+      "Nav": "/"
+    },
+    "Si_SquadHUD_Server": {
+      "Name": "Si_SquadHUD_Server",
+      "Category": "player",
+      "Priority": 100,
+      "Nav": "/"
+    },
+    "Si_TimeOfDay": {
+      "Name": "Time of day",
+      "Category": "player",
+      "Priority": 100,
+      "Nav": "/"
+    },
+    "Si_WormBounty": {
+      "Name": "Worm bounty",
+      "Category": "player",
+      "Priority": 100,
+      "Nav": "/"
+    },
+    "Si_ModUI_Server": {
+      "Name": "Si_ModUI_Server",
+      "Category": "player",
+      "Priority": 100,
+      "Nav": "/"
+    },
+    "Si_MapBalance": {
+      "Name": "Map balance",
+      "Category": "player",
+      "Priority": 100,
+      "Nav": "/"
+    }
+  }
+}

@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework><LangVersion>latest</LangVersion><Nullable>disable</Nullable>
+    <AssemblyName>Si_ServerModUI</AssemblyName><Version>2.0.0</Version>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems><NuGetAudit>false</NuGetAudit>
+    <RestoreIgnoreFailedSources>true</RestoreIgnoreFailedSources>
+    <ServerRoot Condition="'$(ServerRoot)' == ''">$(MSBuildThisFileDirectory)..\..\..</ServerRoot>
+  </PropertyGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="DefaultMenuMetadata.json" LogicalName="Si_ServerModUI.MenuMetadata.json"/>
+    <Compile Include="*.cs"/><Compile Include="../Shared/*.cs"/>
+    <Reference Include="$(ServerRoot)/Silica_Data/Managed/*.dll" Exclude="$(ServerRoot)/Silica_Data/Managed/mscorlib.dll;$(ServerRoot)/Silica_Data/Managed/netstandard.dll;$(ServerRoot)/Silica_Data/Managed/System*.dll" Private="false"/>
+    <Reference Include="$(ServerRoot)/MelonLoader/net35/MelonLoader.dll" Private="false"/>
+    <Reference Include="$(ServerRoot)/MelonLoader/net35/0Harmony.dll" Private="false"/>
+    <Reference Include="$(ServerRoot)/Mods/Si_AdminMod.dll" Private="false"/>
+  </ItemGroup>
+</Project>

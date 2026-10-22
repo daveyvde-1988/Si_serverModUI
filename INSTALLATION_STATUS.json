@@ -1,0 +1,20 @@
+﻿{
+    "installedUtc":  "2026-10-20T15:48:21.0621398Z",
+    "receipt":  "D:\\SteamLibrary\\steamapps\\common\\Silica Dedicated Server\\ClientMods\\Si_ClientModUI\\installation\\20261020T154820752Z\\installation.json",
+    "installed":  [
+                      {
+                          "path":  "C:\\Program Files (x86)\\Steam\\steamapps\\common\\Silica\\Mods\\Si_ClientModUI.dll",
+                          "sha256":  "6d4c8779fbda4afff331922751450f278df7e7f7cf93fb855167a7710d896093"
+                      },
+                      {
+                          "path":  "C:\\Program Files (x86)\\Steam\\steamapps\\common\\Silica\\Mods\\cheats.dll",
+                          "sha256":  "53ed5f3adeaae47de2467036d33ccfb372dc905ef8c94528638ada772987ea81"
+                      },
+                      {
+                          "path":  "D:\\SteamLibrary\\steamapps\\common\\Silica Dedicated Server\\Mods\\Si_ServerModUI.dll",
+                          "sha256":  "fd4e07448d5971483842818787ac24017ef13feb5066a143e5cf520721a25ab6"
+                      }
+                  ],
+    "hashesVerified":  true,
+    "runtimeVerified":  false
+}

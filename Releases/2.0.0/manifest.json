@@ -1,0 +1,26 @@
+﻿{
+    "schema":  3,
+    "serverVersion":  "2.0.0",
+    "preparedUtc":  "2026-10-21T14:50:45.0929755Z",
+    "serverInputs":  [
+                         {
+                             "path":  "Silica_Data\\Managed\\SilicaCore.dll",
+                             "sha256":  "33969f93ebbe60c4182e18c590974bce046bd0f440b7003d888f2e7640b1bcf5"
+                         },
+                         {
+                             "path":  "Mods\\Si_AdminMod.dll",
+                             "sha256":  "51f113348fa0fa30c200451ea4bdeddfd0d7f65e40d15f13a9d007297c041432"
+                         },
+                         {
+                             "path":  "MelonLoader\\net35\\MelonLoader.dll",
+                             "sha256":  "92e7d4d50b8f627a23c38edb9da9426b6df6561d86f10de03dc5831d8ac76af0"
+                         }
+                     ],
+    "runtimeVerified":  false,
+    "files":  [
+                  {
+                      "file":  "Si_ServerModUI.dll",
+                      "sha256":  "4341745f35b82b461c217a17b43452ee08ebf2ec50e63170356455992cfcf1a2"
+                  }
+              ]
+}
